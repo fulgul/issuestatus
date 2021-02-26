@@ -23,7 +23,7 @@ if (localStorage.getItem("issues") != null) {
       let status = issues[i].status;
   
       issueList.innerHTML +=
-        '<div class="well">' +
+        '<div class="issue">' +
         "<h6>Issue ID: " +
         id +
         "</h6>" +
@@ -77,20 +77,6 @@ if (localStorage.getItem("issues") != null) {
     }
     document.getElementById("issueInput").reset();
   
-    loadFromStorage();
-  }
-  
-  function close(id) {
-    console.log("closing");
-    let issues = JSON.parse(localStorage.getItem("issues"));
-    id = parseInt(id, 10);
-  
-    for (let i = issues.length - 1; i >= 0; i--) {
-      if (issues[i].id === id) {
-        issues[i].status = "Closed";
-      }
-    }
-    localStorage.setItem("issues", JSON.stringify(issues));
     loadFromStorage();
   }
   
