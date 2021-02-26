@@ -1,0 +1,20 @@
+div {
+    margin: 10px 0;
+  }
+  
+  .well {
+    margin-top: 50px;
+  }
+  
+  .btn-remove{
+    
+    border-color: #e43a39;
+    color: white;
+    background-color: #e43a39;
+  }
+
+  .btn-remove:hover{
+    background: #b31818;
+    color: white;
+    border-color: #b31818;
+  }
